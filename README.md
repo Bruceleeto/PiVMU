@@ -4,6 +4,13 @@
 
 
 
+https://github.com/Bruceleeto/PiVMU/assets/103404050/1f5d6d7c-fcd9-40a8-b896-bbf03651977e
+
+libgimbal causes a lot of errors. that i've suppressed on my local build to get to run that can cause this to crash I believe.
+Audio is fucked but sometimes it does play even if it's not accurate.
+speed is prob jank. 
+lot of issues. i had a little go of getting this somewhat functional and its good enough. 
+
 very wip. 
 
 
