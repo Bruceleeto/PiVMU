@@ -5,6 +5,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
+#include <signal.h>
 
 #define VMU_LCD_WIDTH 48
 #define VMU_LCD_HEIGHT 32
