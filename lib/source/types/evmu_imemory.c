@@ -103,7 +103,11 @@ static EVMU_RESULT EvmuIMemory_write_(EvmuIMemory* pSelf,
                                       const void*  pData,
                                       size_t*      pBytes)
 {
-    GblObject_setProperty(GBL_OBJECT(pSelf), "dataChanged", GBL_TRUE);
+    const GblProperty* pProp = GblProperty_find(GBL_TYPEOF(pSelf), "dataChanged");
+    if (pProp && (pProp->flags & GBL_PROPERTY_FLAG_WRITE)) {
+        GblObject_setProperty(GBL_OBJECT(pSelf), "dataChanged", GBL_TRUE);
+    }
+    
     GBL_EMIT(pSelf, "dataChange", base, *pBytes, pData);
     return GBL_RESULT_SUCCESS;
 }
